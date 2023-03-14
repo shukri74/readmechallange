@@ -17,8 +17,10 @@ function renderLicenseBadge(license) {
 
   return `[![License](${badgeURL})](https://opensource.org/licenses/${license})\n\n`;
 }
-function generateMarkdown(data) {
-  return `# ${data.title}
+
+/*function generateMarkdown(data) {
+
+return `# ${data.title}
 
 ${renderLicenseBadge(data.license)}
 
@@ -28,7 +30,7 @@ ${data.description}
 
 ## Table of Contents
 
-${tableOfContents(data)}
+[Installation]('# ${data.In})
 
 ## Installation
 
@@ -52,4 +54,4 @@ ${data.tests}
 
 ${questionsSection(data)}
 `;
-}
+} */

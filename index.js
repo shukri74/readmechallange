@@ -1,6 +1,7 @@
-const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
 const fs = require("fs");
+const path = require("path");
+const inquirer = require("inquirer");
+const generateMarkdownretrieve = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
@@ -14,6 +15,13 @@ const questions = [
     name: "contributors",
     message: "Who are the contributors of this project?",
   },
+
+  {
+    type: "input",
+    name: "description",
+    message: "Describe your project in detail",
+  },
+
   {
     type: "input",
     name: "installation",
@@ -52,6 +60,7 @@ const questions = [
     name: "github",
     message: "What is your GitHub username?",
   },
+  
   {
     type: "input",
     name: "email",
@@ -61,20 +70,78 @@ const questions = [
 // function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-      err ? console.log(err) : console.log("successfully generated")
+      err ? console.log(err) : console.log("success!!!")
     );
   }
+
+
+  function renderLicenseBadge(license) {
+    let badgeURL = '';
+  
+    switch (license) {
+      case 'MIT':
+        badgeURL = 'https://img.shields.io/badge/License-MIT-yellow.svg';
+        break;
+      case 'Apache 2.0':
+        badgeURL = 'https://img.shields.io/badge/License-Apache%202.0-blue.svg';
+        break;
+      case 'GPL 3.0':
+        badgeURL = 'https://img.shields.io/badge/License-GPLv3-blue.svg';
+        break;
+      default:
+        return '';
+    }
+  
+    return `[![License](${badgeURL})](https://opensource.org/licenses/${license})\n\n`;
+  }
+
+
+  function generateMarkdown(data) {
+    return `# ${data.title}
+  
+  ${renderLicenseBadge(data.license)}
+  
+  ## Description
+  
+  ${data.description}
+  
+  ## Table of Contents
+  
+  [Installation](#Installation)
+  [Description](#Description)
+  [Usage](#Usage)
+  [Contributors](#Contributors)
+  [Tests](#Tests)
+  [Questions](#Questions')
+
+  ## Installation
+  
+  ${data.installation}
+  
+  ## Usage
+  
+  ${data.usage}
+  
+  ${data.license}
+  
+  ## Contributing
+  
+  ${data.contributors}
+  
+  ## Questions
+  
+  If you have any questions Email me at ${data.email} and if you want to see more of my work visit [${data.github}](https://github.com/${data.github})
+  `;
+  }
+  
   
   // function to initialize program
-  function init() {
+  (function init () {
     inquirer.prompt(questions).then((responses) => {
       console.log(responses);
-      const answers = generateMarkdown(responses);
-      writeToFile("README.md", answers, (err) =>
+      const markdown = generateMarkdown(responses);
+      writeToFile("README.md", markdown, (err) =>
         err ? console.log(err) : console.log("made it")
       );
     });
-  }
-
-// function call to initialize program
-init();
+  })()
