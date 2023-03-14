@@ -10,16 +10,16 @@
   
   ## Table of Contents
   
-  [Installation](#Installation)
-  [Description](#Description)
-  [Usage](#Usage)
-  [Contributors](#Contributors)
-  [Tests](#Tests)
-  [Questions](#Questions')
+  *[Installation](#Installation)
+  *[Description](#Description)
+  *[Usage](#Usage)
+  *[Contributors](#Contributors)
+  *[Tests](#Tests)
+  *[Questions](#Questions')
 
   ## Installation
   
-  Clone the repo and open using node.js
+     Clone the repo and open using node.js
   
   ## Usage
   
@@ -33,5 +33,5 @@
   
   ## Questions
   
-  If you have any questions Email me at Shukri.mohamed@mail.com and if you want to see more of my work visit [shukri74](https://github.com/shukri74)
+  If you have any questions Email me at shukri.mohamed@mail.com and if you want to see more of my work visit [shukri74](https://github.com/shukri74)
   

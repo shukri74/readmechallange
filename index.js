@@ -3,34 +3,55 @@ const path = require("path");
 const inquirer = require("inquirer");
 const generateMarkdownretrieve = require("./utils/generateMarkdown");
 
+
+const validation = (input) => {
+    
+  if(input != null){
+
+    return true
+  }
+
+  else{
+
+    return "please give a valid response"
+
+  }
+}
+
+
 // array of questions for user
 const questions = [
   {
     type: "input",
     name: "title",
     message: "What is the title of your project?",
+    validate: validation
   },
   {
     type: "input",
     name: "contributors",
     message: "Who are the contributors of this project?",
+    validate: validation,
   },
 
   {
     type: "input",
     name: "description",
     message: "Describe your project in detail",
+    validate: validation,
   },
 
   {
     type: "input",
     name: "installation",
     message: "How to install the project?",
+    validate: validation,
   },
   {
     type: "input",
     name: "usage",
     message: "How to use the project?",
+    validate: validation,
   },
   {
     type: "list",
@@ -59,12 +80,14 @@ const questions = [
     type: "input",
     name: "github",
     message: "What is your GitHub username?",
+    validate: validation,
   },
   
   {
     type: "input",
     name: "email",
     message: "What is your email address?",
+    validate: validation,
   },
 ];
 // function to write README file
@@ -107,12 +130,12 @@ function writeToFile(fileName, data) {
   
   ## Table of Contents
   
-  [Installation](#Installation)
-  [Description](#Description)
-  [Usage](#Usage)
-  [Contributors](#Contributors)
-  [Tests](#Tests)
-  [Questions](#Questions')
+  *[Installation](#Installation)
+  *[Description](#Description)
+  *[Usage](#Usage)
+  *[Contributors](#Contributors)
+  *[Tests](#Tests)
+  *[Questions](#Questions')
 
   ## Installation
   
@@ -145,3 +168,5 @@ function writeToFile(fileName, data) {
       );
     });
   })()
+
+  
