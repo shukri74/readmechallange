@@ -130,11 +130,11 @@ function writeToFile(fileName, data) {
   
   ## Table of Contents
   
-  *[Installation](#Installation)
-  *[Description](#Description)
-  *[Usage](#Usage)
-  *[Contributors](#Contributors)
-  *[Tests](#Tests)
+  *[Installation](#Installation)\n
+  *[Description](#Description)\n
+  *[Usage](#Usage)\n
+  *[Contributors](#Contributors)\n
+  *[Tests](#Tests)\n
   *[Questions](#Questions')
 
   ## Installation
