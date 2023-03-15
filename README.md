@@ -1,4 +1,4 @@
-# readme challenge
+# Readme Challenge
   
   [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -6,7 +6,7 @@
   
   ## Description
   
-   This is a Github Readme generator that was made using node.js and uses user inputs to make a readme and writes this to an exsisting readme file
+  This is a program which uses user inputs in the terminal to generate a github readme. It was made using node.js
   
   ## Table of Contents
   
@@ -24,11 +24,11 @@
 
   ## Installation
   
-    Clone the repo and open using node.js
+  Clone and the repo and use the terminal to run the script using node.js
   
   ## Usage
   
-  
+  See License
   
   MIT
   
@@ -38,5 +38,5 @@
   
   ## Questions
   
-  If you have any questions Email me at shukri.mohamed@mail.com and if you want to see more of my work visit [shukri74](https://github.com/shukri74)
+  If you have any questions Email me at shukri.mohamed@mail.com and if you want to see more of my work visit [Shukri74](https://github.com/Shukri74)
   
