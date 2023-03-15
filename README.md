@@ -7,6 +7,9 @@
   ## Description
   
   This is a program which uses user inputs in the terminal to generate a github readme. It was made using node.js
+
+https://user-images.githubusercontent.com/116843679/225347905-4cbaebcf-bfb5-4104-8e97-cd4aed68edff.mp4
+
   
   ## Table of Contents
   
